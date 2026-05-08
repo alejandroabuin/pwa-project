@@ -1,0 +1,25 @@
+@if (dog()) {
+  <div class="detail-container">
+    <button (click)="back()">Back</button>
+
+    <h1>{{ dog()?.name }}</h1>
+
+    <div class="image-container">
+      <img [src]="dog()?.image" [alt]="dog()?.name" />
+    </div>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Show all details </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <p><strong>ID:</strong> {{ dog()?.id }}</p>
+        <p><strong>Name:</strong> {{ dog()?.name }}</p>
+        <p><strong>Image URL:</strong> {{ dog()?.image }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+} @else {
+  <p>Loading...</p>
+}
