@@ -1,6 +1,9 @@
 @if (dog()) {
   <div class="detail-container">
-    <button (click)="back()">Back</button>
+    <button mat-raised-button (click)="back()">
+      <mat-icon>arrow_back</mat-icon>
+      Back
+    </button>
 
     <h1>{{ dog()?.name }}</h1>
 

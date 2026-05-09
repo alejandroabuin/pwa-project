@@ -1,13 +1,14 @@
 import { Component, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Dog } from '../../models/dog.model';
 import { DogService } from '../../services/dog';
 
 @Component({
   selector: 'app-detail',
-  imports: [MatExpansionModule, MatButtonModule],
+  imports: [MatExpansionModule, MatButtonModule, MatIconModule],
   templateUrl: './detail.html',
   styleUrl: './detail.scss',
 })

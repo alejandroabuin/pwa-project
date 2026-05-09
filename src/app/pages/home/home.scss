@@ -31,6 +31,9 @@ mat-spinner {
   text-align: center;
   animation: fadeIn 1s ease-in;
   cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .dog-card img {
@@ -62,6 +65,8 @@ tr {
 tr:hover,
 .dog-card:hover {
   opacity: 0.85;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .view-buttons {
