@@ -1,0 +1,14 @@
+Aplicación Angular 21 desarrollada como Progressive Web App (PWA) utilizando una API pública de imágenes de perros.
+
+La aplicación incluye:
+
+Vista tipo cards y tipo tabla.
+Navegación lista-detalle.
+Angular Material.
+Spinner de carga.
+Animaciones CSS.
+Funcionamiento offline mediante Service Worker y caché.
+Uso del nuevo control flow de Angular (@if y @for).
+
+URL desplegada:
+https://pec4.netlify.app/

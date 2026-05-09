@@ -1,41 +1,50 @@
-<h1>Dog Gallery</h1>
+<div class="home-container">
+  <h1>Dog Gallery</h1>
 
-<div class="view-buttons">
-  <button (click)="changeView('cards')">Cards</button>
-  <button (click)="changeView('table')">Table</button>
-</div>
+  <div class="view-buttons">
+    <button (click)="changeView('cards')">
+      <mat-icon>grid_view</mat-icon>
+      Cards
+    </button>
 
-@if (loading()) {
-  <mat-spinner diameter="80"></mat-spinner>
-}
+    <button (click)="changeView('table')">
+      <mat-icon>table_rows</mat-icon>
+      Table
+    </button>
+  </div>
 
-@if (!loading()) {
-  @if (viewMode() === 'cards') {
-    <div class="cards-container">
-      @for (dog of dogs(); track dog.id) {
-        <div class="dog-card" (click)="goToDetail(dog.id)">
-          <h2>{{ dog.name }}</h2>
-
-          <img [src]="dog.image" [alt]="dog.name" />
-        </div>
-      }
-    </div>
-  } @else {
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Image</th>
-      </tr>
-
-      @for (dog of dogs(); track dog.id) {
-        <tr class="dog-item" (click)="goToDetail(dog.id)">
-          <td>{{ dog.name }}</td>
-
-          <td>
-            <img [src]="dog.image" [alt]="dog.name" width="120" />
-          </td>
-        </tr>
-      }
-    </table>
+  @if (loading()) {
+    <mat-spinner diameter="80"></mat-spinner>
   }
-}
+
+  @if (!loading()) {
+    @if (viewMode() === 'cards') {
+      <div class="cards-container">
+        @for (dog of dogs(); track dog.id) {
+          <div class="dog-card" (click)="goToDetail(dog.id)">
+            <h2>{{ dog.name }}</h2>
+
+            <img [src]="dog.image" [alt]="dog.name" />
+          </div>
+        }
+      </div>
+    } @else {
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+        </tr>
+
+        @for (dog of dogs(); track dog.id) {
+          <tr class="dog-item" (click)="goToDetail(dog.id)">
+            <td>{{ dog.name }}</td>
+
+            <td>
+              <img [src]="dog.image" [alt]="dog.name" width="120" />
+            </td>
+          </tr>
+        }
+      </table>
+    }
+  }
+</div>

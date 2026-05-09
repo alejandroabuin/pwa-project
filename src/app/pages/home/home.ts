@@ -1,4 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Router } from '@angular/router';
 import { Dog } from '../../models/dog.model';
@@ -6,7 +7,7 @@ import { DogService } from '../../services/dog';
 
 @Component({
   selector: 'app-home',
-  imports: [MatProgressSpinnerModule],
+  imports: [MatProgressSpinnerModule, MatIconModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
